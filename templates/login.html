@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- JavaScript -->
+<style>
+body {
+    background-image: linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Open Sans", sans-serif;
+    color: #333333;
+}
+.box-form {
+  margin: auto;
+  top: 30%;
+  left: 30%;
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 6px #090b6f85;
+  width: 800px;
+  height: auto;
+  display: block;
+}
+@media screen and (max-width: 300px) {
+    .cancelbtn,
+    .signupbtn {
+        width: 100%;
+    }
+}
+.button{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      width: 50%;
+      height: 50px;
+      background-image: linear-gradient(135deg, #70f570 10%, #49c628 100%);
+      font-size: 24px;
+      color: white;
+      border-radius: 20px;
+      border-color: white;
+      box-shadow: none;
+}
+</style>
+
+<body>
+<div class="box-form">
+    <header class="w3-container w3-white w3-border-bottom">
+      <h2>Enter your login details here:</h2>
+    </header>
+
+    <div class="w3-container w3-white w3-text-dark-grey">
+      <form action="validate" onsubmit="return validateFormOnSubmit(this);" method="post">
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="email" type="text" placeholder="email" id="email">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-lock"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" type="password" placeholder="Password" name="password" id="pss">
+    </div>
+</div>
+<button class="button">Login</button>
+
+</form>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<script>
+function validateFormOnSubmit(form){
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("pss").value;
+  localStorage.setItem("email", email);
+  localStorage.setItem("password", password);
+}
+
+</script>
+</html>
