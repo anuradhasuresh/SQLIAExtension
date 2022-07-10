@@ -16,7 +16,7 @@ from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import CountVectorizer
 
 #preprocessing
-df = pd.read_excel(r'1&2Data.xlsx', engine="openpyxl")
+df = pd.read_excel(r'CombinedData.xlsx', engine="openpyxl")
 df1 = pd.DataFrame(df, index = df.index, columns = df.columns)
 
 vectorizer = CountVectorizer(min_df=2, max_df=0.7, stop_words=stopwords.words('english'))
